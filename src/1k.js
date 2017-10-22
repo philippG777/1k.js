@@ -6,7 +6,7 @@
 This are the methods that are added by the select or $
 function.
 */
-_1kExt = {
+var _1kExt = {
     on: function(event, callback)
     {
         this.each(function(element)
@@ -32,15 +32,19 @@ _1kExt = {
 
     toggleClass: function(className)
     {
-        this.forEach(function(element)
+        this.each(function(element)
         {
             var classes = element.className.split(' ');
             var index = classes.indexOf(className);
             if(index != -1)
             {
                 classes.splice(index, 1);
-                element.className = classes.join(' ');
             }
+            else
+            {
+                classes.push(className);
+            }
+            element.className = classes.join(' ');
         });
         return this;
     }

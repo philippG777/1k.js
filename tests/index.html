@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests</title>
+    <script type="text/javascript" src="../src/1k.min.js"></script>
+    <style type="text/css">
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test-Page</h1>
+    <p>Hower on the list-items to change the color and click them to hide them.</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <button>Toggle all list-items</button>
+
+    <script type="text/javascript">
+        $('li').on('mouseenter', function()
+        {
+            this.style.color = 'red';
+        }).on('mouseleave', function()
+        {
+            this.style.color = 'black';
+        }).on('click', function()
+        {
+            this.toggleClass('hidden');
+        });
+
+        $('button').on('click', function()
+        {
+            $('li').toggleClass('hidden');
+        });
+
+        get('https://api.opensensemap.org', function(resp){
+            console.log(resp.responseText);
+        });
+
+    </script>
+</body>
+</html>
