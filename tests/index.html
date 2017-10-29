@@ -45,6 +45,10 @@
             console.log(resp.responseText);
         });
 
+        get('https://api.github.com/', function(resp){
+            console.log(resp);
+        }, 'json');
+
     </script>
 </body>
 </html>

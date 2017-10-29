@@ -50,6 +50,13 @@ var _1kExt = {
     }
 };
 
+var _1kGetExt = {
+    json: function(resp)
+    {
+        return JSON.parse(resp.responseText);
+    }
+};
+
 
 /*
 The select method returns a list of selected elements or a single selected
@@ -135,16 +142,17 @@ Arguments:
     If this type is not set to "json" it will give the raw data as
     argument.
 */
-function get(url, callback, json)
+function get(url, callback, type)
 {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function()
     {
         if(this.readyState == 4 && this.status == 200)
         {
-            if(json)
+            var extention = _1kGetExt[type];
+            if(isset(type) && isset(extention))
             {
-                callback(JSON.parse(this.responseText));
+                callback(extention(this));
             }
             else
             {

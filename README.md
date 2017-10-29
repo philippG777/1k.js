@@ -14,6 +14,13 @@ You can use all classic methods and maps on the resulting elements like `.innerH
 #### .toggleClass(`class`)-method
 
 
-### get(`url`, `callback` [, `isJson`])
+### get(`url`, `callback` [, `type`])
 
 This function performs a get-request to the given `url`.
+
+## Default extentions
+### Select-extentions
+
+
+
+### Get-extentions
