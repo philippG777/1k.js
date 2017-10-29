@@ -19,7 +19,8 @@ get('https://api.github.com', function(response){
 );
 
 /*
-This get-request-callback will get the response allready as js-object. The response will allready be parsed from
+This get-request-callback will get the response allready as js-object.
+The response will allready be parsed from
 JSON-text to an object.
 */
 
