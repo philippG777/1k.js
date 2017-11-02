@@ -6,7 +6,7 @@ A tiny JavaScript-library for solving everyday problems.
 ### $(`query`)
 Selects elements in jQuery-style: the `query`-argument is a css selector.
 You can use all classic methods and maps on the resulting elements like `.innerHTML` ant `.style.color`. 
-It will add methods to the selected element, this extentions are in the `_1kExt`-map defined.
+It will add methods to the selected element, this extensions are in the `_1kExt`-map defined.
 
 
 ### get(`url`, `callback` [, `type`])
@@ -27,12 +27,12 @@ JSON-text to an object.
 ```
 
 
-## Default extentions
-### Select-extentions
+## Default extensions
+### Select-extensions
 * `.on(event, callback)` will add an eventlistener on the specific object(s)
 * `.each(callback(object))` will loop over all objects
 * `.toggleClass(class)` will toggle a class of the specific object(s)
 
 
-### Get-extentions
+### Get-extensions
 * `json` will return the response as object, parsed from the original response

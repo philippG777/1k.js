@@ -83,25 +83,25 @@ function $(query)
     }
 
     /*
-    This function creates the extention-methods on both: list and elements.
+    This function creates the extension-methods on both: list and elements.
     */
-    var createExtentions = function(res)
+    var createExtensions = function(res)
     {
         // add on parent obj
-        forEach(_1kExt, function(extention, fname)
+        forEach(_1kExt, function(extension, fname)
         {
-            res[fname] = extention;
+            res[fname] = extension;
         });
         res.data = {};
         return res;
     }
 
-    // add extentions
-    createExtentions(res);
+    // add extensions
+    createExtensions(res);
 
     res.forEach(function(value)
     {
-        createExtentions(value);
+        createExtensions(value);
     });
 
     if(res.length == 1)
@@ -149,10 +149,10 @@ function get(url, callback, type)
     {
         if(this.readyState == 4 && this.status == 200)
         {
-            var extention = _1kGetExt[type];
-            if(isset(type) && isset(extention))
+            var extension = _1kGetExt[type];
+            if(isset(type) && isset(extension))
             {
-                callback(extention(this));
+                callback(extension(this));
             }
             else
             {
